@@ -1,0 +1,73 @@
+/* Remove background image from body */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Full-screen video background */
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Puts it behind content */
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the full screen */
+  }
+  
+  /* Centering the content */
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensures it's above the video */
+  }
+  
+  /* Button styling */
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .yes-button, .no-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .yes-button {
+    background-color: #4caf50;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .no-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .yes-button:hover, .no-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* GIF container */
+  .gif_container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
